@@ -1,13 +1,15 @@
 {
   "name": "gowtham-portfilio",
   "private": true,
+  "homepage": "https://gowtham207.github.io/portfilio",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "pre-build": "npm run build"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.17",
