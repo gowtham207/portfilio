@@ -1,0 +1,1 @@
+import{i as e,o as t,t as n}from"./index-CutbXUR-.js";e();var r=t(n(),1),i=()=>(0,r.jsx)(`div`,{children:`NotFound`});export{i as default};
