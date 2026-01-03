@@ -2,6 +2,8 @@ import React, { memo, useState } from 'react'
 import type { navBarHyperLinkType } from '../types/navBarType'
 import NavBarHyperLink from './NavBarHyperLink'
 import { Menu, X } from 'lucide-react' // optional but clean icons
+import { MdOutlineTerminal } from 'react-icons/md';
+import { Link } from 'react-router';
 
 const NavBar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -18,9 +20,14 @@ const NavBar: React.FC = () => {
       <div className="px-4 md:px-10 py-3 flex items-center justify-between mx-auto max-w-7xl">
 
         {/* Logo */}
-        <h2 className="text-lg font-bold text-slate-900 dark:text-white">
-          Gowtham.dev
-        </h2>
+        <Link to="/" className='flex flex-row items-center gap-2'>
+          <MdOutlineTerminal className='text-primary' size={25} />
+          <h1 className="text-lg font-bold flex-row items-center text-slate-900 dark:text-white">
+            Gowtham.dev
+          </h1>
+
+        </Link>
+
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-9">
@@ -58,7 +65,7 @@ const NavBar: React.FC = () => {
                 key={index}
                 name={value.name}
                 href={value.href}
-                onClick={() => setIsOpen(val => !val)}
+                onClick={() => setIsOpen(false)}
               />
             ))}
 

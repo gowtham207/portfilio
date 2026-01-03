@@ -1,5 +1,6 @@
 import React, { memo } from 'react'
 import { FaGithub,FaLinkedin  } from "react-icons/fa6";
+import { MdOutlineTerminal } from "react-icons/md";
 
 import { HiOutlineMailOpen } from "react-icons/hi";
 
@@ -8,7 +9,7 @@ const Footer:React.FC = () => {
         <footer className="w-full border-t border-solid border-slate-200 dark:border-card-border bg-white dark:bg-[#111218] py-8">
         <div className="px-4 md:px-10 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center gap-2 text-slate-900 dark:text-white">
-                <span className="material-symbols-outlined text-primary">terminal</span>
+                  <MdOutlineTerminal className='text-primary' />
                 <span className="font-bold text-lg">Gowtham.dev</span>
             </div>
             <div className="flex gap-6">

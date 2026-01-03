@@ -5,7 +5,7 @@ import ProjectExperience from '../components/experience/ProjectExperience'
 
 const Experience: React.FC = () => {
     return (
-        <main className="layout-container p-5 flex h-full grow flex-col">
+        <main className="layout-container  justify-center p-5 lg:px-10 flex h-full grow flex-col">
             <Hero />
             <Professional />
             <ProjectExperience />
