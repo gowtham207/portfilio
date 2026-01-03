@@ -1,0 +1,1 @@
+import{i as e,o as t,t as n}from"./index-BKq3j1WZ.js";e();var r=t(n(),1),i=()=>(0,r.jsx)(`div`,{children:`NotFound`});export{i as default};

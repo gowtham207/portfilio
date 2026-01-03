@@ -1,4 +1,4 @@
-import{i as e,o as t,t as n}from"./index-CutbXUR-.js";import"./iconBase-Cx89i9q-.js";import{_ as r,c as i,d as a,g as o,l as s,m as c,p as l}from"./md-Bn62joWw.js";var u=t(e(),1),d=`/portfilio/assets/experience-wxLOGwQI.webp`,f=t(n(),1),p=()=>(0,f.jsx)(`div`,{className:`@container`,children:(0,f.jsx)(`div`,{className:`p-0`,children:(0,f.jsxs)(`div`,{className:`group relative flex min-h-80 flex-col gap-6\r
+import{i as e,o as t,t as n}from"./index-BKq3j1WZ.js";import"./iconBase-BL5srcg7.js";import{_ as r,c as i,d as a,g as o,l as s,m as c,p as l}from"./md-DuaYg3J6.js";var u=t(e(),1),d=`/portfilio/assets/experience-wxLOGwQI.webp`,f=t(n(),1),p=()=>(0,f.jsx)(`div`,{className:`@container`,children:(0,f.jsx)(`div`,{className:`p-0`,children:(0,f.jsxs)(`div`,{className:`group relative flex min-h-80 flex-col gap-6\r
                                 items-start justify-end\r
                                 rounded-xl px-6 pb-10 md:px-10\r
                                 shadow-lg overflow-hidden`,children:[(0,f.jsx)(`img`,{src:d,alt:`Abstract digital blue waves representing technology flow`,className:`absolute inset-0 h-full w-full object-cover\r
