@@ -1,8 +1,16 @@
-import React, { memo } from 'react'
+import React, { memo, useCallback } from 'react'
 import { MdCloudDownload } from "react-icons/md";
 import hero from '../../assets/images/hero1.webp';
 
 const Hero: React.FC = () => {
+
+    const handleDownload = useCallback(() => {
+        const link = document.createElement("a");
+        link.href = "/gowtham-software-engineer.pdf";
+        link.download = "gowtham-software-engineer.pdf";
+        link.click();
+    }, [])
+
     return (
         <section className="w-full px-4 md:px-10 py-12 md:py-6 max-w-7xl">
             <div className="@container">
@@ -26,6 +34,7 @@ const Hero: React.FC = () => {
                         </div>
                         <div className="flex flex-wrap gap-4 mt-2">
                             <button
+                                onClick={handleDownload}
                                 className="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-8 bg-primary dark:bg-card-border border border-slate-200 dark:border-transparent  dark:hover:bg-[#323647] transition-colors text-gray-100 dark:text-white text-base font-bold leading-normal tracking-[0.015em]">
                                 <span className="flex items-center gap-4 text-xl">
                                     <MdCloudDownload color='#fffff' size={30} />

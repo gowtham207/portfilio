@@ -1,18 +1,29 @@
 import React, { useCallback } from 'react'
+import { useNavigate } from 'react-router';
 import { Typewriter } from 'react-simple-typewriter';
 
 
 const AboutHero: React.FC = () => {
+
+  const navigate = useNavigate()
+
+  const navigateExperience = useCallback(() => {
+    navigate('/experience#project')
+  }, [navigate])
+
+  const navigateContact = useCallback(() => {
+    navigate('/contact')
+  }, [navigate])
 
   const handleMargin = useCallback((index: number) => {
     if (index === 0) {
       return ' mr-4'
     }
     if ([1, 6].includes(index)) {
-      return ' mr-6'
+      return ' mr-10'
     }
     if ([2, 3, 4, 7, 8, 9, 10, 11].includes(index)) {
-      return 'mr-12'
+      return 'mr-16'
     }
   }, [])
 
@@ -66,11 +77,11 @@ const AboutHero: React.FC = () => {
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center lg:justify-start pt-4">
-            <button className="flex items-center justify-center rounded-lg h-12 px-6 bg-primary text-white text-base font-bold shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all hover:-translate-y-0.5">
+            <button onClick={navigateContact} className="flex items-center justify-center rounded-lg h-12 px-6 bg-primary text-white text-base font-bold shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all hover:-translate-y-0.5">
               Contact Me
             </button>
 
-            <button className="flex items-center justify-center rounded-lg h-12 px-6 bg-card-dark border border-border-dark text-white text-base font-bold hover:bg-border-dark transition-all">
+            <button onClick={navigateExperience} className="flex items-center justify-center rounded-lg h-12 px-6 bg-card-dark border border-border-dark text-white text-base font-bold hover:bg-border-dark transition-all">
               View Projects
             </button>
           </div>

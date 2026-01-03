@@ -88,7 +88,7 @@ const ProjectExperience: React.FC = () => {
 
 
     return (
-        <section className="flex flex-col gap-6 mt-12">
+        <section className="flex flex-col gap-6 mt-12" id="project">
             {/* Header */}
             <div className="flex items-center gap-3 border-b border-gray-200 dark:border-card-border pb-4">
                 <div className="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">

@@ -41,10 +41,10 @@ const NavBar: React.FC = () => {
         </div>
 
         {/* Right Side */}
-        <div className="flex items-center gap-4">
-          <button className="hidden cursor-pointer md:flex h-10 px-6 items-center rounded-lg bg-primary hover:bg-blue-700 transition-colors text-white text-sm font-bold">
+        <div className="md:hidden  flex items-center gap-4">
+          {/* <button className="hidden cursor-pointer md:flex h-10 px-6 items-center rounded-lg bg-primary hover:bg-blue-700 transition-colors text-white text-sm font-bold">
             Hire Me
-          </button>
+          </button> */}
 
           {/* Hamburger (Mobile) */}
           <button
@@ -69,9 +69,9 @@ const NavBar: React.FC = () => {
               />
             ))}
 
-            <button className="mt-2 h-10 rounded-lg bg-primary text-white font-bold">
+            {/* <button className="mt-2 h-10 rounded-lg bg-primary text-white font-bold">
               Hire Me
-            </button>
+            </button> */}
           </div>
         </div>
       )}
