@@ -5,10 +5,12 @@ import { RiCloseCircleFill } from "react-icons/ri";
 type Props = {
     onclick?: () => void;
     isError: boolean;
+    text: string
+    title: string;
 }
 
 
-const Popup: React.FC<Props> = ({ onclick, isError }) => {
+const Popup: React.FC<Props> = ({ onclick, isError, text, title }) => {
     return (
         <>
             <div>
@@ -23,8 +25,8 @@ const Popup: React.FC<Props> = ({ onclick, isError }) => {
                                 <IoCheckmarkCircleOutline size={60} className="mx-auto text-green-500" />
                             )}
                             <div className="mt-6">
-                                <h3 className="text-xl text-slate-900 font-semibold">Successfully accepted!</h3>
-                                <p className="text-sm text-slate-500 leading-relaxed mt-3">Thank you for reaching out. I will get back to you as soon as possible.
+                                <h3 className="text-xl text-slate-900 font-semibold">{title}</h3>
+                                <p className="text-sm text-slate-500 leading-relaxed mt-3">{text}
                                 </p>
                             </div>
                         </div>

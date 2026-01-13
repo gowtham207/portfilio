@@ -9,32 +9,42 @@ import { MdOutlineSend } from "react-icons/md";
 
 const Contact: React.FC = () => {
     const [loading, setLoading] = React.useState<boolean>(false);
-    const [popup, setPopup] = React.useState<{ isOpen: boolean; isError: boolean }>({ isOpen: false, isError: false });
+    const [popup, setPopup] = React.useState<{ isOpen: boolean; isError: boolean, text: string, title: string }>({ isOpen: false, isError: false, text: "", title: "" });
     const formSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const form = e.currentTarget;
+
+        const formData = new FormData(form);
+
+        const data = {
+            name: formData.get("name")?.toString().trim() || '',
+            email: formData.get("email")?.toString().trim() || '',
+            subject: formData.get("subject")?.toString().trim() || '',
+            message: formData.get("message")?.toString().trim() || '',
+        };
+
+        // 🚫 Stop empty submission
+        if (!data.name || !data.email || !data.subject || !data.message) {
+            setPopup({ isOpen: true, isError: true, text: "Please fill in all the fields.", title: "Submission Error" });
+            return;
+        }
+
         try {
             setLoading(true);
-            const formData = new FormData(form);
-            const data = {
-                name: formData.get("name")?.toString() || '',
-                email: formData.get("email")?.toString() || '',
-                subject: formData.get("subject")?.toString() || '',
-                message: formData.get("message")?.toString() || '',
-            };
             await apiCall(data);
-            setPopup({ isOpen: true, isError: false });
+            setPopup({ isOpen: true, isError: false, text: "Your message has been sent successfully.", title: "Success!" });
             form.reset();
         } catch (err) {
             console.error(err);
-            setPopup({ isOpen: true, isError: true });
+            setPopup({ isOpen: true, isError: true, text: "Something went wrong. Please try again later.", title: "Error!" });
         } finally {
             setLoading(false);
         }
     };
 
+
     const onClosePopup = useCallback(() => {
-        setPopup({ isOpen: false, isError: false });
+        setPopup({ isOpen: false, isError: false, text: "", title: "" });
     }, []);
 
     return (
@@ -45,7 +55,7 @@ const Contact: React.FC = () => {
                 </div>
             )}
             {
-                popup.isOpen && <Popup onclick={onClosePopup} isError={popup.isError} />
+                popup.isOpen && <Popup onclick={onClosePopup} isError={popup.isError} text={popup.text} title={popup.title} />
             }
 
             <div className="layout-content-container flex flex-col max-w-[1200px] flex-1 w-full">
@@ -128,7 +138,7 @@ const Contact: React.FC = () => {
                                     <input
                                         name='name'
                                         className="form-input flex w-full min-w-0 p-3 flex-1 resize-none overflow-hidden rounded-lg text-slate-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-slate-300 dark:border-[#3b3f54] bg-slate-50 dark:bg-[#1c1d27] focus:border-primary h-12 placeholder:text-slate-400 dark:placeholder:text-[#9da1b9] px-4 text-base font-normal leading-normal transition-all"
-                                        placeholder="John Doe" type="text" />
+                                        placeholder="John Doe" type="text" required />
                                 </label>
 
                                 <label className="flex flex-col flex-1">
@@ -136,7 +146,7 @@ const Contact: React.FC = () => {
                                         Email</p>
                                     <input
                                         className="form-input flex w-full min-w-0  p-3  flex-1 resize-none overflow-hidden rounded-lg text-slate-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-slate-300 dark:border-[#3b3f54] bg-slate-50 dark:bg-[#1c1d27] focus:border-primary h-12 placeholder:text-slate-400 dark:placeholder:text-[#9da1b9] px-4 text-base font-normal leading-normal transition-all" name='email'
-                                        placeholder="john@example.com" type="email" />
+                                        placeholder="john@example.com" type="email" required />
                                 </label>
                                 <label className="flex flex-col w-full">
                                     <p className="text-slate-900 dark:text-white text-sm font-medium leading-normal pb-2">
@@ -144,7 +154,7 @@ const Contact: React.FC = () => {
                                     <input
                                         name='subject'
                                         className="form-input flex p-3  w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-slate-300 dark:border-[#3b3f54] bg-slate-50 dark:bg-[#1c1d27] focus:border-primary h-12 placeholder:text-slate-400 dark:placeholder:text-[#9da1b9] px-4 text-base font-normal leading-normal transition-all"
-                                        placeholder="Project Inquiry" type="text" />
+                                        placeholder="Project Inquiry" type="text" required />
                                 </label>
                                 <label className="flex flex-col w-full">
                                     <p className="text-slate-900 dark:text-white text-sm font-medium leading-normal pb-2">
@@ -152,7 +162,7 @@ const Contact: React.FC = () => {
                                     <textarea
                                         name='message'
                                         className="form-textarea flex w-full min-w-0 flex-1 resize-none rounded-lg text-slate-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-slate-300 dark:border-[#3b3f54] bg-slate-50 dark:bg-[#1c1d27] focus:border-primary placeholder:text-slate-400 dark:placeholder:text-[#9da1b9] p-4 text-base font-normal leading-normal transition-all"
-                                        placeholder="Hello, I'd like to discuss a potential project..." rows={5}></textarea>
+                                        placeholder="Hello, I'd like to discuss a potential project..." rows={5} required></textarea>
                                 </label>
                                 {/* <!-- Submit Button --> */}
                                 <button
