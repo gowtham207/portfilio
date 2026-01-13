@@ -21,10 +21,12 @@ const AboutSection: React.FC = () => {
             </div>
             <p
               className="text-slate-600 dark:text-slate-400 text-base md:text-lg font-normal leading-relaxed max-w-3xl">
-              I am a Full-Stack Developer and Data Engineer with a passion for solving real-world
-              problems. My expertise lies in building scalable mobile apps using React Native,
-              architecting serverless backends with Python (Flask/FastAPI) and AWS, and managing robust
-              data pipelines. I focus on delivering mobile-first designs and efficient cloud solutions.
+              I am a Full-Stack Developer and Data Engineer with expertise in React Native, Python
+              <span className='font-bold'>(Flask/FastAPI)</span>, GraphQL, and AWS <span className='font-bold'>(Lambda, API Gateway, ECS, CloudFront)</span>. Skilled
+              in building scalable mobile apps, serverless backends, and robust databases with
+              PostgreSQL/MySQL. In healthcare, I engineered ETL pipelines to clean and load data from
+              PM/EMR systems, enabling analytics and chronic care management. Passionate about
+              solving real-world problems with mobile-first design, cloud solutions, and data pipelines.
             </p>
           </div>
         </div>

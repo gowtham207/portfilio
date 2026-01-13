@@ -25,11 +25,12 @@ const Hero: React.FC = () => {
                             </h1>
                             <h2 className="text-slate-600 dark:text-slate-400 text-lg font-normal leading-relaxed max-w-xl">
                                 Hi, I'm <span className="text-slate-900 dark:text-white font-bold">Gowtham Kannan R</span>.
-                                I specialize in <span className="text-primary font-medium">React Native</span>, <span
-                                    className="text-primary font-medium">Python (Flask/FastAPI)</span>, <span
-                                        className="text-primary font-medium">GraphQL</span>, and <span
-                                            className="text-primary font-medium">AWS</span>. I craft robust databases and solve
-                                real-world problems with mobile-first design.
+                                I specialize in <span className="text-primary font-medium">React Native</span>,{" "}
+                                <span className="text-primary font-medium">Python (Flask/FastAPI)</span>,{" "}
+                                <span className="text-primary font-medium">GraphQL</span>, and{" "}
+                                <span className="text-primary font-medium">AWS</span>. I build scalable systems,
+                                design robust databases, and solve real-world problems with a
+                                <span className="font-medium"> mobile-first approach</span>.
                             </h2>
                         </div>
                         <div className="flex flex-wrap gap-4 mt-2">
