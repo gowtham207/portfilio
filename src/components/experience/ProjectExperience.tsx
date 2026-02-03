@@ -66,7 +66,7 @@ const ProjectExperience: React.FC = () => {
                 "Optimized backend services using Flask for high performance.",
                 "Utilized Nx monorepo tools with React Native for mobile apps and Vue.js for dashboard interfaces."
             ],
-            "tags": ["Flask", "Nx", "Vue.js", "CI/CD"]
+            "tags": ["Flask", "Nx", "React.js", "React Native", "CI/CD"]
         },
         {
             "id": "project-5",
