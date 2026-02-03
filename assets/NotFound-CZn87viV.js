@@ -1,4 +1,4 @@
-import{c as e,o as t,t as n}from"./index-ByenRJiM.js";t();var r=e(n(),1),i=()=>(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(`style`,{children:`
+import{c as e,o as t,t as n}from"./index-MnhzK9vA.js";t();var r=e(n(),1),i=()=>(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(`style`,{children:`
         * {
           margin: 0;
           padding: 0;
