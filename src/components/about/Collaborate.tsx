@@ -1,6 +1,13 @@
-import React, { memo } from 'react'
+import React, { memo, useCallback } from 'react'
+import { useNavigate } from 'react-router';
 
 const Collaborate: React.FC = () => {
+    const nav = useNavigate()
+
+    const onclick = useCallback(() => {
+        nav('/contact')
+    }, [nav])
+
     return (
         <section className="w-full max-w-6xl px-4 lg:px-10 py-16">
             <div
@@ -55,6 +62,8 @@ const Collaborate: React.FC = () => {
                             hover:shadow-primary/50 hover:scale-105
                             transition-all duration-300
                         "
+                        type='button'
+                        onClick={onclick}
                     >
                         Let&apos;s Collaborate
                     </button>

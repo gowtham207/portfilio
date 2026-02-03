@@ -20,10 +20,13 @@ const AboutHero: React.FC = () => {
       return ' mr-4'
     }
     if ([1, 6].includes(index)) {
-      return ' mr-10'
+      return 'mr-10'
     }
-    if ([2, 3, 4, 7, 8, 9, 10, 11].includes(index)) {
+    if ([2, 3, 4, 7, 11].includes(index)) {
       return 'mr-16'
+    }
+    if ([8, 9, 10].includes(index)) {
+      return 'mr-22'
     }
   }, [])
 
