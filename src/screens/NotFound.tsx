@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useCallback } from "react";
+import { useNavigate } from "react-router";
 
 const NotFound404: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleBackToHome = useCallback(() => {
+    navigate("/");
+  }, [navigate])
+
   return (
     <>
       <style>{`
@@ -168,9 +175,9 @@ const NotFound404: React.FC = () => {
           <div className="glitch">404</div>
           <h2>Page Not Found</h2>
           <p>The page you’re looking for doesn’t exist or was moved.</p>
-          <a href="/" className="btn">
+          <button onClick={handleBackToHome} className="btn">
             Back to Home
-          </a>
+          </button>
         </div>
       </div>
     </>
