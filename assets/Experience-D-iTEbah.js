@@ -1,4 +1,4 @@
-import{c as e,i as t,o as n,t as r}from"./index-BpNWBXYa.js";import{c as i,d as a,g as o,l as s,p as c,v as l,y as u}from"./md-BesmppWM.js";var d=e(n(),1),f=`/portfilio/assets/experience-wxLOGwQI.webp`,p=e(r(),1),m=()=>(0,p.jsx)(`div`,{className:`@container`,children:(0,p.jsx)(`div`,{className:`p-0`,children:(0,p.jsxs)(`div`,{className:`group relative flex min-h-80 flex-col gap-6\r
+import{c as e,i as t,o as n,t as r}from"./index-DgR5JMTV.js";import{c as i,d as a,g as o,l as s,p as c,v as l,y as u}from"./md-DXjv1bS3.js";var d=e(n(),1),f=`/portfilio/assets/experience-wxLOGwQI.webp`,p=e(r(),1),m=()=>(0,p.jsx)(`div`,{className:`@container`,children:(0,p.jsx)(`div`,{className:`p-0`,children:(0,p.jsxs)(`div`,{className:`group relative flex min-h-80 flex-col gap-6\r
                                 items-start justify-end\r
                                 rounded-xl px-6 pb-10 md:px-10\r
                                 shadow-lg overflow-hidden`,children:[(0,p.jsx)(`img`,{src:f,alt:`Abstract digital blue waves representing technology flow`,className:`absolute inset-0 h-full w-full object-cover\r

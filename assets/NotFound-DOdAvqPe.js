@@ -1,4 +1,4 @@
-import{c as e,o as t,t as n}from"./index-BpNWBXYa.js";t();var r=e(n(),1),i=()=>(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(`style`,{children:`
+import{a as e,c as t,o as n,t as r}from"./index-DgR5JMTV.js";var i=t(n(),1),a=t(r(),1),o=()=>{let t=e(),n=(0,i.useCallback)(()=>{t(`/`)},[t]);return(0,a.jsxs)(a.Fragment,{children:[(0,a.jsx)(`style`,{children:`
         * {
           margin: 0;
           padding: 0;
@@ -153,4 +153,4 @@ import{c as e,o as t,t as n}from"./index-BpNWBXYa.js";t();var r=e(n(),1),i=()=>(
           transform: translateY(-2px);
           box-shadow: 0 10px 30px rgba(19, 55, 236, 0.35);
         }
-      `}),(0,r.jsxs)(`div`,{className:`page`,children:[(0,r.jsx)(`div`,{className:`blob one`}),(0,r.jsx)(`div`,{className:`blob two`}),(0,r.jsxs)(`div`,{className:`container`,children:[(0,r.jsx)(`div`,{className:`glitch`,children:`404`}),(0,r.jsx)(`h2`,{children:`Page Not Found`}),(0,r.jsx)(`p`,{children:`The page you’re looking for doesn’t exist or was moved.`}),(0,r.jsx)(`a`,{href:`/portfolio`,className:`btn`,children:`Back to Home`})]})]})]});export{i as default};
+      `}),(0,a.jsxs)(`div`,{className:`page`,children:[(0,a.jsx)(`div`,{className:`blob one`}),(0,a.jsx)(`div`,{className:`blob two`}),(0,a.jsxs)(`div`,{className:`container`,children:[(0,a.jsx)(`div`,{className:`glitch`,children:`404`}),(0,a.jsx)(`h2`,{children:`Page Not Found`}),(0,a.jsx)(`p`,{children:`The page you’re looking for doesn’t exist or was moved.`}),(0,a.jsx)(`button`,{onClick:n,className:`btn`,children:`Back to Home`})]})]})]})};export{o as default};
